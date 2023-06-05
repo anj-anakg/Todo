@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'regstyle.css' %}">
+   <title>registration_form</title>
+</head>
+<body>
+
+    <form method="post">
+              {% csrf_token %}
+        <h2>Register Here</h2>
+            <label>{{form.username.label}}</label>
+              {{form.username}}
+            <br>
+            <label>{{form.password1.label}}</label>
+              {{form.password1}}
+            <br>
+            <label>{{form.password2.label}}</label>
+              {{form.password2}}
+            <br>
+            <input class="button" type="submit" value="Register">
+        <p>ALREADY HAVE ACCOUNT?<a href="{% url 'login' %}">LOGIN</a></p>
+    </form>
+
+</body>
+</html>
+

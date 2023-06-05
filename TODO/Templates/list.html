@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Detail View</title>
+</head>
+<body>
+<h2>Task List</h2>
+<div class="header-box">
+    <div>
+        <h2>Hello {{User.username | title}}</h2>
+    </div>
+    {%if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">LOGOUT</a>
+    {% else %}
+    <a href="{% url 'login' %}">LOGIN</a>
+    {%endif%}
+</div>
+<table border="1px;">
+    <td><a href="{% url 'task-create' %}"> ADD TASK</a></td>
+    <div class="task-items-wrapper">
+        {% for i in task %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.completed}}</td>
+            <td>{{i.created}}</td>
+            <td><a href="{% url 'task-update' i.id %}">UPDATE</a></td>
+            <td><a href="{% url 'task-delete' i.id %}">DELETE</a></td>
+        </tr>
+        {% endfor %}
+    </div>
+</table>
+</body>
+</html>
+
