@@ -1,0 +1,35 @@
+body{
+background-image:url("./pxfuel.jpg");
+}
+
+form{
+
+  position:relative;
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 50px auto 0;
+  border-radius: 2px;
+  border-style:dashed;
+  border-color:Green;
+}
+label{
+  color:Green;
+}
+h{
+color:Green;
+font-family:Monospace;
+}
+input[type="submit"]{
+  background-color: #04aa6d;
+  border: none;
+  color: white;
+  display:flex;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+a{
+    padding:12px 5px;
+}

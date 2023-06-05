@@ -7,7 +7,7 @@ body{
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background: #ecf0f3;
+  background-image: url("./clipboard.jpg");
   display: flex;
   align-items: center;
   text-align: center;
@@ -57,6 +57,11 @@ input::placeholder {
   color: gray;
 }
 
+input[type="submit"]:{
+     hover
+
+}
+
 input {
   background: #ecf0f3;
   padding: 10px;
@@ -79,6 +84,7 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
-  box-shadow: none;
+button:{
+   hover
 }
+

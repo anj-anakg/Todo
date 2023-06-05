@@ -6,21 +6,15 @@
 </head>
 <body>
 <h2>Task List</h2>
-<div class="header-box">
-    <div>
+ <div>
         <h2>Hello {{User.username | title}}</h2>
-    </div>
-    {%if request.user.is_authenticated %}
-    <a href="{% url 'logout' %}">LOGOUT</a>
-    {% else %}
-    <a href="{% url 'login' %}">LOGIN</a>
-    {%endif%}
-</div>
+ </div>
+<a href="{% url 'task-create' %}" font-family="sans-serif"> ADD TASK</a>
+
 <table border="1px;">
-    <td><a href="{% url 'task-create' %}"> ADD TASK</a></td>
     <div class="task-items-wrapper">
         {% for i in task %}
-        <tr>
+          <tr>
             <td>{{i.id}}</td>
             <td>{{i.title}}</td>
             <td>{{i.description}}</td>
@@ -28,10 +22,19 @@
             <td>{{i.created}}</td>
             <td><a href="{% url 'task-update' i.id %}">UPDATE</a></td>
             <td><a href="{% url 'task-delete' i.id %}">DELETE</a></td>
-        </tr>
+          </tr>
         {% endfor %}
     </div>
 </table>
+<div class="header-box">
+
+    {%if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">LOGOUT</a>
+    {% else %}
+    <a href="{% url 'login' %}">LOGIN</a>
+    {%endif%}
+</div>
+
 </body>
 </html>
 
