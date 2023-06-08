@@ -7,7 +7,7 @@ body{
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("./clipboard.jpg");
+  background-color:#d3dff5;
   display: flex;
   align-items: center;
   text-align: center;
@@ -25,8 +25,8 @@ body{
   border-radius: 20px;
   padding: 40px;
   box-sizing: border-box;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  background:SkyBlue;
+
 }
 
 
@@ -63,13 +63,12 @@ input[type="submit"]:{
 }
 
 input {
-  background: #ecf0f3;
+  background: LightGrey;
   padding: 10px;
   padding-left: 20px;
   height: 50px;
   font-size: 14px;
   border-radius: 50px;
-  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
 }
 
 button {
@@ -80,11 +79,11 @@ button {
   border-radius: 20px;
   cursor: pointer;
   font-weight: 900;
-  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+
   transition: 0.5s;
 }
 
-button:{
+button{
    hover
 }
 

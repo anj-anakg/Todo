@@ -1,8 +1,4 @@
-
-
-
 body {
-  background-image: url("./login_img.jpg");
   font-family: sans-serif;
   font-size: 10px
 }
@@ -34,6 +30,7 @@ input {
     width: 100%;
     outline: none;
     margin:0;
+
   }
 input[type="text"],input[type="password"] {
     background: #fff;
@@ -58,6 +55,7 @@ input[type="submit"] {
     border: none;
     color: #fff;
     cursor: pointer;
+    pointer-events:auto;
     display: block;
     font-size: 2em;
     line-height: 1.6em;

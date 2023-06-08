@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{% static 'regstyle.css' %}">
    <title>registration_form</title>
 </head>
-<body>
+<body style="background-color:#347044">
 
     <form method="post">
               {% csrf_token %}
@@ -20,7 +20,7 @@
               {{form.password2}}
             <br>
             <input class="button" type="submit" value="Register">
-        <p>ALREADY HAVE ACCOUNT?<a href="{% url 'login' %}">LOGIN</a></p>
+       <p>ALREADY HAVE ACCOUNT?<a href="{% url 'login' %}">LOGIN</a></p>
     </form>
 
 </body>

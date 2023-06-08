@@ -26,7 +26,7 @@ class RegisterView(FormView):
     redirect_authenticated_user = True
     success_url = reverse_lazy('task')
 
-    def from_valid(self, form):
+    def form_valid(self, form):
         user = form.save()
         if user is not None:
             login(self.request, user)
@@ -43,6 +43,11 @@ class Tasklist(LoginRequiredMixin, ListView):
     context_object_name = 'task'
     template_name = 'list.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['task'] = context['task'].filter(user=self.request.user)
+        context['count'] = context['task'].filter(completed=False).count()
+        return context
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
