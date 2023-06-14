@@ -1,22 +1,25 @@
 
 /* Set font and background colors */
 body{
-     font-family: monospace;
-     background-image:url("blackboard.jpg");
+ font-family: monospace;
+ background-image:url("./pxfuel.jpg");
 }
+
+
 h1{
     text-align: center;
+
 }
 
         /* Change font color and style for h1 */
 h1{
-    color: Black;
+    color: #1B5E20;
     font-family: monospace;
      font-size: 28px;
     font-weight: bold;
 }
 h2{
-   color:Black;
+   color:#1B5E20;
 }
 
 
@@ -30,14 +33,19 @@ table {
     width: 100%;
     border-collapse: collapse;
     background:white;
+    color:#388E3C;
 }
 
 table, th, td {
     border: 2px solid;
+
 }
 
 th, td {
     padding: 8px;
+}
+th{
+color:#388E3C;
 }
 
 
@@ -53,7 +61,7 @@ th, td {
 /* Style the links */
 
 a{
-    color:black;
+    color:#1B5E20;
     text-decoration: none;
     padding: 8px;
     text-align:right;
