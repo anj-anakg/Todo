@@ -49,6 +49,7 @@ class Tasklist(LoginRequiredMixin, ListView):
         context['count'] = context['task'].filter(completed=False).count()
         return context
 
+
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'completed', 'description']
